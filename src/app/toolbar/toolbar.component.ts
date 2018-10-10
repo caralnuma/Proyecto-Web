@@ -8,13 +8,18 @@ import { map } from 'rxjs/operators';
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.css']
 })
+
+
 export class ToolbarComponent {
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
     );
+    Titulo:string;    
+  constructor(private breakpointObserver: BreakpointObserver) 
+  {
+    this.Titulo="Seleccionar Curso"
+  }
     
-  constructor(private breakpointObserver: BreakpointObserver) {}
-  
   }

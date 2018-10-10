@@ -5,32 +5,33 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
 export interface TablaItem {
+  tipo: string;
   name: string;
   id: number;
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: TablaItem[] = [
-  {id: 1, name: 'Hydrogen'},
-  {id: 2, name: 'Helium'},
-  {id: 3, name: 'Lithium'},
-  {id: 4, name: 'Beryllium'},
-  {id: 5, name: 'Boron'},
-  {id: 6, name: 'Carbon'},
-  {id: 7, name: 'Nitrogen'},
-  {id: 8, name: 'Oxygen'},
-  {id: 9, name: 'Fluorine'},
-  {id: 10, name: 'Neon'},
-  {id: 11, name: 'Sodium'},
-  {id: 12, name: 'Magnesium'},
-  {id: 13, name: 'Aluminum'},
-  {id: 14, name: 'Silicon'},
-  {id: 15, name: 'Phosphorus'},
-  {id: 16, name: 'Sulfur'},
-  {id: 17, name: 'Chlorine'},
-  {id: 18, name: 'Argon'},
-  {id: 19, name: 'Potassium'},
-  {id: 20, name: 'Calcium'},
+  {id: 1, name: 'Calculo 1', tipo: 'Examen'},
+  {id: 2, name: 'Calculo 2', tipo: 'Curso'},
+  {id: 3, name: 'Fisica 1', tipo: 'Curso'},
+  {id: 4, name: 'Gal 1', tipo: 'Curso'},
+  {id: 5, name: 'Sistemas Operativos 2', tipo: 'Examen'},
+  {id: 6, name: 'Infraestructuras', tipo: 'Curso'},
+  {id: 7, name: 'Matematica Discreta 1', tipo: 'Examen'},
+  {id: 8, name: 'Logica 1', tipo: 'Examen'},
+  {id: 9, name: 'Matematica discreta 2', tipo: 'Curso'},
+  {id: 10, name: 'Gal 2', tipo: 'Examen'},
+  {id: 11, name: 'Caluclo 3', tipo: 'Curso'},
+  {id: 12, name: 'Ecuaciones diferenciales', tipo: 'Examen'},
+  {id: 13, name: 'Programacion 1', tipo: 'Examen'},
+  {id: 14, name: 'Programacion 2', tipo: 'Examen'},
+  {id: 15, name: 'Programacion 4', tipo: 'Curso'},
+  {id: 16, name: 'Sistemas operativos', tipo: 'Curso'},
+  {id: 17, name: 'Programacion 3', tipo: 'Examen'},
+  {id: 18, name: 'Proyecto', tipo: 'Examen'},
+  {id: 19, name: 'Taller de informacion geografica', tipo: 'Curso'},
+  {id: 20, name: 'Competencias roboticas', tipo: 'Examen'},
 ];
 
 /**
@@ -102,7 +103,7 @@ export class TablaDataSource extends DataSource<TablaItem> {
   }
 }
 
-/** Simple sort comparator for example ID/Name columns (for client-side sorting). */
+/** Simple sort comparator for example ID/name columns (for client-side sorting). */
 function compare(a, b, isAsc) {
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
