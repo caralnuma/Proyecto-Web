@@ -4,9 +4,12 @@
       <span ><a mat-button href="#"> Inscripcion asignatura </a></span>
       <span ><a mat-button href="#"> Inscripcion carrera  </a></span>
       <span ><a mat-button href="#"> Inscripcion examen  </a></span>
-      <span ><a mat-button href="../grafo/grafo.html"> Consultar calificacion  </a></span>
+      <span ><a mat-button [routerLink]="['/tabla']"> Consultar calificacion  </a></span>
       <span class="example-fill-remaining-space"></span>
       <span>  Proyecto</span>
+      <div class='container'>
+        <router-outlet></router-outlet>
+      </div>
     </mat-toolbar>
    {{Titulo}}
   </mat-sidenav-content>

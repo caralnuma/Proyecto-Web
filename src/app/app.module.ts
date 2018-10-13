@@ -8,18 +8,31 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { GridComponent } from './grid/grid.component';
 import { TablaComponent } from './tabla/tabla.component';
-
+import { CursosComponent } from './cursos/cursos.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     GridComponent,
-    TablaComponent
+    TablaComponent,
+    CursosComponent
   ],
   imports: [
     BrowserModule,BrowserAnimationsModule,
-    MatButtonModule, MatCheckboxModule, LayoutModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule
+    MatButtonModule, MatCheckboxModule, 
+    LayoutModule, MatToolbarModule, 
+    MatSidenavModule, MatIconModule, 
+    MatListModule, MatGridListModule, 
+    MatCardModule, MatMenuModule, 
+    MatTableModule, MatPaginatorModule, 
+    MatSortModule,
+    RouterModule.forRoot([
+      {path: 'cursos',component:CursosComponent},
+      {path: 'grid', component:GridComponent},
+      {path: 'tabla', component:TablaComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
