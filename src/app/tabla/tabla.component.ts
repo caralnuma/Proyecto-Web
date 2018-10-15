@@ -14,6 +14,10 @@ export class TablaComponent implements OnInit {
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['id', 'name','tipo'];
+  carreras=[{id:1,name:'calculo'},
+    {id:2,name:'calculo 2'},
+    {id:3,name:'calculo 3'}
+];
 
   ngOnInit() {
     this.dataSource = new TablaDataSource(this.paginator, this.sort);

@@ -101,9 +101,14 @@ export class TablaDataSource extends DataSource<TablaItem> {
       }
     });
   }
+ /* applyFilter(filterValue:string){
+    this.dataSource.filter=filterValue.trim().toLowerCase();
+  }*/
+
 }
 
 /** Simple sort comparator for example ID/name columns (for client-side sorting). */
 function compare(a, b, isAsc) {
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
+
