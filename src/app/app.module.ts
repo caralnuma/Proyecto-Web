@@ -10,6 +10,9 @@ import { GridComponent } from './grid/grid.component';
 import { TablaComponent } from './tabla/tabla.component';
 import { CursosComponent } from './cursos/cursos.component';
 import {RouterModule} from '@angular/router';
+import { AgGridModule } from 'ag-grid-angular';
+import {Grid} from "ag-grid/main";
+
 
 @NgModule({
   declarations: [
@@ -27,7 +30,7 @@ import {RouterModule} from '@angular/router';
     MatListModule, MatGridListModule, 
     MatCardModule, MatMenuModule, 
     MatTableModule, MatPaginatorModule, 
-    MatSortModule,
+    MatSortModule,AgGridModule.withComponents([]),
     RouterModule.forRoot([
       {path: 'cursos',component:CursosComponent},
       {path: 'grid', component:GridComponent},
