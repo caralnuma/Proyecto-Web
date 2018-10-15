@@ -11,6 +11,7 @@ import { TablaComponent } from './tabla/tabla.component';
 import { CursosComponent } from './cursos/cursos.component';
 import {RouterModule} from '@angular/router';
 import { AgGridModule } from 'ag-grid-angular';
+import { AppRoutingModuleModule } from './app-routing-module/app-routing-module.module';
 import {Grid} from "ag-grid/main";
 
 
@@ -31,11 +32,7 @@ import {Grid} from "ag-grid/main";
     MatCardModule, MatMenuModule, 
     MatTableModule, MatPaginatorModule, 
     MatSortModule,AgGridModule.withComponents([]),
-    RouterModule.forRoot([
-      {path: 'cursos',component:CursosComponent},
-      {path: 'grid', component:GridComponent},
-      {path: 'tabla', component:TablaComponent}
-    ])
+    AppRoutingModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

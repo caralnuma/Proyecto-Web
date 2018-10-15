@@ -7,10 +7,10 @@
       <span ><a mat-button [routerLink]="['/tabla']"> Consultar calificacion  </a></span>
       <span class="example-fill-remaining-space"></span>
       <span>  Proyecto</span>
-      <div class='container'>
-        <router-outlet></router-outlet>
-      </div>
     </mat-toolbar>
    {{Titulo}}
   </mat-sidenav-content>
 </mat-sidenav-container>
+<div class="mat-sidenav-container" style="align-content: center; align-items: center; align-self: center">
+  <router-outlet></router-outlet>
+</div>
